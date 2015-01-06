@@ -1,16 +1,16 @@
 diff --git a/haveclip-core/haveclip-core.pro b/haveclip-core/haveclip-core.pro
-index dc64abc..9b43658 100644
+index bc07186..c8d35d8 100644
 --- a/haveclip-core/haveclip-core.pro
 +++ b/haveclip-core/haveclip-core.pro
-@@ -79,4 +79,5 @@ unix {
+@@ -89,5 +89,5 @@ unix {
  	}
  }
  
 -unix|win32: LIBS += -lqca
 +unix|win32: LIBS += -L/usr/lib64/qca2 -lqca
-+
+ 
 diff --git a/haveclip-core/src/CertificateGenerator.h b/haveclip-core/src/CertificateGenerator.h
-index 0ef4ea6..6be24e3 100644
+index 1015469..89c71f6 100644
 --- a/haveclip-core/src/CertificateGenerator.h
 +++ b/haveclip-core/src/CertificateGenerator.h
 @@ -2,7 +2,7 @@
@@ -23,7 +23,7 @@ index 0ef4ea6..6be24e3 100644
  class CertificateGenerator : public QObject
  {
 diff --git a/haveclip-desktop/haveclip-desktop.pro b/haveclip-desktop/haveclip-desktop.pro
-index a053e48..594baa9 100644
+index 4336686..054853b 100644
 --- a/haveclip-desktop/haveclip-desktop.pro
 +++ b/haveclip-desktop/haveclip-desktop.pro
 @@ -67,6 +67,6 @@ else:unix: LIBS += -L$$OUT_PWD/../haveclip-core/bin/ -lhaveclipcore
