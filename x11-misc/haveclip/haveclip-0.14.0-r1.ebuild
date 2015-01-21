@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/haveclip/${PV}/haveclip-desktop-${PV}-src.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="dev-qt/qtcore:4[ssl]
 	dev-qt/qtgui:4

@@ -1,14 +1,18 @@
 diff --git a/haveclip-core/haveclip-core.pro b/haveclip-core/haveclip-core.pro
-index bc07186..c8d35d8 100644
+index bc07186..43d5c58 100644
 --- a/haveclip-core/haveclip-core.pro
 +++ b/haveclip-core/haveclip-core.pro
-@@ -89,5 +89,5 @@ unix {
+@@ -85,9 +85,7 @@ OTHER_FILES += \
+ unix {
+ 	!mac {
+ 		CONFIG += link_pkgconfig
+-		PKGCONFIG += x11
++                PKGCONFIG += x11 qca2
  	}
  }
  
 -unix|win32: LIBS += -lqca
-+unix|win32: LIBS += -L/usr/lib64/qca2 -lqca
- 
+-
 diff --git a/haveclip-core/src/CertificateGenerator.h b/haveclip-core/src/CertificateGenerator.h
 index 1015469..89c71f6 100644
 --- a/haveclip-core/src/CertificateGenerator.h
@@ -23,14 +27,17 @@ index 1015469..89c71f6 100644
  class CertificateGenerator : public QObject
  {
 diff --git a/haveclip-desktop/haveclip-desktop.pro b/haveclip-desktop/haveclip-desktop.pro
-index 4336686..054853b 100644
+index 4336686..c28f421 100644
 --- a/haveclip-desktop/haveclip-desktop.pro
 +++ b/haveclip-desktop/haveclip-desktop.pro
-@@ -67,6 +67,6 @@ else:unix: LIBS += -L$$OUT_PWD/../haveclip-core/bin/ -lhaveclipcore
+@@ -67,6 +67,9 @@ else:unix: LIBS += -L$$OUT_PWD/../haveclip-core/bin/ -lhaveclipcore
  INCLUDEPATH += $$PWD/../haveclip-core/src
  DEPENDPATH += $$PWD/../haveclip-core/src
  
 -unix|win32: LIBS += -lqca
-+unix|win32: LIBS += -L/usr/lib64/qca2 -lqca
++unix {
++    CONFIG += link_pkgconfig
++    PKGCONFIG += qca2
++}
  
  mac:ICON=gfx/HaveClip.icns
