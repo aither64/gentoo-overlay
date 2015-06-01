@@ -4,4 +4,7 @@
 <maintainer>
 	<email>aither@havefun.cz</email>
 </maintainer>
+<use>
+	<flag name='devel'>Checkout branch devel</flag>
+</use>
 </pkgmetadata>

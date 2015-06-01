@@ -1,5 +1,11 @@
+*haveclip-9999 (01 Jun 2015)
+
+  01 Jun 2015; Jakub Skokan <aither@havefun.cz> +haveclip-9999.ebuild,
+  metadata.xml:
+  Add live ebuild haveclip-9999, describe flag devel
+
 *haveclip-0.14.0-r1 (21 Jan 2015)
 
-  21 Jan 2015;  <aither@gentoo.org> +haveclip-0.14.0-r1.ebuild,
+  21 Jan 2015; Jakub Skokan <aither@havefun.cz> +haveclip-0.14.0-r1.ebuild,
   -haveclip-0.14.0.ebuild, files/crypto.patch:
   HaveClip: support ~x86
