@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,8 +16,7 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND="dev-qt/qtcore:4[ssl]
 	dev-qt/qtgui:4
-	app-crypt/qca
-	app-crypt/qca-ossl
+	app-crypt/qca[openssl]
 	virtual/pkgconfig
 	x11-libs/libX11
 	x11-proto/xproto"
